@@ -4,6 +4,11 @@ services:
   - name: fallenbagel/jellyseerr:latest
     alias: jellyseerr
 
+build:
+  stage: build
+  script:
+    - pip install requirements.txt
+
 test:
   stage: test
   script:
