@@ -3,6 +3,8 @@ import requests
 
 from http import HTTPStatus
 
+from source.settings import JELLYSEERR_URL
+
 
 class TestAuth(unittest.TestCase):
     # def test_api(self):
@@ -14,7 +16,7 @@ class TestAuth(unittest.TestCase):
             "username": "admin",
             "password": "password"
         }
-        response1 = requests.post("http://jellyseerr:5055/api/v1/auth/jellyfin", json=payload)
+        response1 = requests.post(JELLYSEERR_URL + "auth/jellyfin", json=payload)
         self.assertEqual(response1.status_code, HTTPStatus.OK)
 
         response2 = requests.get("http://jellysseerr:5055/api/v1", headers={"X-Api-Key": response1.json()["jellyfinAuthToken"]})
