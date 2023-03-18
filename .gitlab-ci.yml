@@ -4,15 +4,8 @@ image: python:latest
 #  - name: fallenbagel/jellyseerr:latest
 #    alias: jellyseerr
 
-build:
-  stage: build
-  script:
-    - pip install -r requirements.txt
-
 test:
-  stage: test
   script:
     - python --version
-    - pwd
-    - ls tests
+    - pip install -r requirements.txt
     - python -m unittest discover
