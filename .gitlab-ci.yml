@@ -12,6 +12,7 @@ build:
 test:
   stage: test
   script:
+    - python --version
     - pwd
     - ls tests
     - python -m unittest
