@@ -1,8 +1,8 @@
 image: python:latest
 
-services:
-  - name: fallenbagel/jellyseerr:latest
-    alias: jellyseerr
+#services:
+#  - name: fallenbagel/jellyseerr:latest
+#    alias: jellyseerr
 
 build:
   stage: build
@@ -12,4 +12,5 @@ build:
 test:
   stage: test
   script:
+    - pwd
     - python -m unittest
