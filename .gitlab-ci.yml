@@ -13,4 +13,5 @@ test:
   stage: test
   script:
     - pwd
+    - -ls
     - python -m unittest
