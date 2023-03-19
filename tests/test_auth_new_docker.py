@@ -23,5 +23,6 @@ class TestAuth(unittest.TestCase):
         print(response2.json())
         self.assertEqual(response2.status_code, HTTPStatus.OK)
 
+
 if __name__ == "__main__":
     unittest.main()
